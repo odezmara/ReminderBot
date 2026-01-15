@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TOKEN = 7978063185:AAFx7VaplhOIONGM_P_M3-lZfaZNADf3q5w
+TOKEN = os.getenv('7978063185:AAFx7VaplhOIONGM_P_M3-lZfaZNADf3q5w')
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("✅ Настроить напоминание о таблетках", callback_data='set_reminder')]]
@@ -97,5 +97,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
